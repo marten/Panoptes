@@ -27,7 +27,7 @@ describe Api::V1::ProjectPagesController, type: :controller do
     let(:index_params) { {project_id: project.id} }
     let(:n_visible) { 2 }
 
-    it_behaves_like "is indexable", false
+    it_behaves_like "is indexable"
 
     describe "for a private project" do
       let(:private_project) { create(:project, private: true) }

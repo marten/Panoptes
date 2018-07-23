@@ -26,7 +26,6 @@ describe Api::V1::SubjectSetImportsController, type: :controller do
     # The second import is linked to a different public project, which we don't own, and should be invisible
     # The third import is linked to a different private project, which we also don't own, and should be invisible
     let(:n_visible) { 1 }
-    let(:private_resource) { subject_set_imports.last }
 
     it_behaves_like "is indexable"
   end

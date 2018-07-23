@@ -17,7 +17,6 @@ RSpec.describe Api::V1::ProjectPreferencesController, type: :controller do
   let(:resource_class) { UserProjectPreference }
 
   describe "#index" do
-    let!(:private_resource) { create(:user_project_preference) }
     let(:n_visible) { 2 }
 
     it_behaves_like "is indexable"

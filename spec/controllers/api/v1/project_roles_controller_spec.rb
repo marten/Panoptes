@@ -18,7 +18,6 @@ RSpec.describe Api::V1::ProjectRolesController, type: :controller do
   let(:resource_class) { AccessControlList }
 
   describe "#index" do
-    let!(:private_resource) { create(:access_control_list, resource: create(:project, private: true)) }
     let(:n_visible) { 3 }
 
     it_behaves_like "it has custom owner links"

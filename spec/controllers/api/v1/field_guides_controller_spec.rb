@@ -19,7 +19,6 @@ describe Api::V1::FieldGuidesController, type: :controller do
 
   describe "#index" do
     let(:n_visible) { 2 }
-    let(:private_resource) { field_guides.last }
 
     it_behaves_like "is indexable"
 

@@ -27,10 +27,6 @@ RSpec.describe Api::V1::OrganizationContentsController, type: :controller do
   describe "#index" do
     let(:acl_roles) { %w(collaborator) }
 
-    let!(:private_resource) do
-      create(:unlisted_organization).organization_contents.first
-    end
-
     before { acl }
 
     let(:n_visible) { 3 }

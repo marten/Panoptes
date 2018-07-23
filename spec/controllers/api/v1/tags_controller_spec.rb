@@ -20,7 +20,7 @@ RSpec.describe Api::V1::TagsController, type: :controller do
   describe "#index" do
     let(:n_visible) { 2 }
 
-    it_behaves_like "is indexable", false
+    it_behaves_like "is indexable"
 
     describe "search by name" do
       let(:resource) { create(:tag, name: "bowie") }

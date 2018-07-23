@@ -19,7 +19,6 @@ RSpec.describe Api::V1::CollectionPreferencesController, type: :controller do
 
 
   describe "#index" do
-    let!(:private_resource) { create(:user_collection_preference) }
     let(:n_visible) { 2 }
 
     it_behaves_like "is indexable"

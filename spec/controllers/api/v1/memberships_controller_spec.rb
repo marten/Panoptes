@@ -12,7 +12,6 @@ describe Api::V1::MembershipsController, type: :controller do
   let(:resource_class) { Membership }
 
   describe "#index" do
-    let!(:private_resource) { create(:membership) }
     let(:n_visible) { 4 }
 
     before(:each) do

@@ -21,9 +21,6 @@ RSpec.describe Api::V1::SubjectWorkflowStatusesController, type: :controller do
     end
     let(:private_project) { create(:project_with_workflow, private: true) }
     let(:private_workflow) { private_project.workflows.first }
-    let!(:private_resource) do
-      create(:subject_workflow_status, workflow: private_workflow)
-    end
     let(:authorized_user) { workflow.project.owner }
     let(:n_visible) { 2 }
 

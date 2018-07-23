@@ -24,11 +24,6 @@ RSpec.describe Api::V1::ProjectContentsController, type: :controller do
              roles: ["translator"])
     end
 
-    let!(:private_resource) do
-      create(:project_with_contents, private: true)
-        .project_contents.first
-    end
-
     let(:n_visible) { 2 }
 
     it_behaves_like "is indexable"

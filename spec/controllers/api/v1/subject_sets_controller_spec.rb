@@ -40,7 +40,6 @@ describe Api::V1::SubjectSetsController, type: :controller do
     let(:filterable_resources) { subject_sets }
     let(:expected_filtered_ids) { [ filterable_resources.first.id.to_s ] }
     let(:private_project) { create(:project, private: true) }
-    let!(:private_resource) { create(:subject_set, project: private_project)  }
     let(:n_visible) { 2 }
 
     it_behaves_like 'is indexable'

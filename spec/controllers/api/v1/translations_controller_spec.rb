@@ -29,9 +29,6 @@ RSpec.describe Api::V1::TranslationsController, type: :controller do
           { translated_type: resource_type.to_s }
         end
         let(:n_visible) { 1 }
-        let(:private_resource) do
-          create(:translation, translated: create(:private_project))
-        end
 
         describe "filtering" do
           let(:non_filter_translation) do

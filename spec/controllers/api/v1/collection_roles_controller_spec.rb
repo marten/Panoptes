@@ -18,7 +18,6 @@ RSpec.describe Api::V1::CollectionRolesController, type: :controller do
   let(:resource_class) { AccessControlList }
 
   describe "#index" do
-    let!(:private_resource) { create(:access_control_list, resource: create(:collection, private: true)) }
     let(:n_visible) { 3 }
 
     it_behaves_like "is indexable"

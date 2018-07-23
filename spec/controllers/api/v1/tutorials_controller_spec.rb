@@ -6,8 +6,7 @@ describe Api::V1::TutorialsController, type: :controller do
   let(:workflow) { create(:workflow, project: project) }
   let!(:tutorials) do
     [ create(:tutorial, project: project),
-      create(:tutorial),
-      create(:tutorial, project: private_project) ]
+      create(:tutorial) ]
   end
 
   let(:scopes) { %w(public project) }
@@ -20,7 +19,6 @@ describe Api::V1::TutorialsController, type: :controller do
 
   describe "#index" do
     let(:n_visible) { 2 }
-    let(:private_resource) { tutorials[2] }
 
     it_behaves_like "is indexable"
 

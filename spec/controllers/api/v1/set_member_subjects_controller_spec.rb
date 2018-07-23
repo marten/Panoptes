@@ -13,11 +13,6 @@ RSpec.describe Api::V1::SetMemberSubjectsController, type: :controller do
   let(:resource_class) { SetMemberSubject }
 
   describe "#index" do
-    let!(:private_resource) do
-      ss = create(:subject_set, project: create(:project, private: true))
-      create(:set_member_subject, subject_set: ss)
-    end
-
     let(:n_visible) { 2 }
 
     it_behaves_like "is indexable"

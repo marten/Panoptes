@@ -18,7 +18,6 @@ RSpec.describe Api::V1::OrganizationRolesController, type: :controller do
   let(:resource_class) { AccessControlList }
 
   describe "#index" do
-    let!(:private_resource) { create(:access_control_list, resource: create(:unlisted_organization)) }
     let(:n_visible) { 3 }
 
     it_behaves_like "it has custom owner links"

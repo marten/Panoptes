@@ -27,7 +27,7 @@ describe Api::V1::OrganizationPagesController, type: :controller do
     let(:index_params) { {organization_id: organization.id} }
     let(:n_visible) { 2 }
 
-    it_behaves_like "is indexable", false
+    it_behaves_like "is indexable"
 
     describe "filter options" do
       let(:filter_opts) { {} }

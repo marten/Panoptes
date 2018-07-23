@@ -22,12 +22,6 @@ RSpec.describe Api::V1::WorkflowContentsController, type: :controller do
              roles: ["translator"])
     end
 
-    let!(:private_resource) do
-      project = create(:project, private: true)
-      create(:workflow_with_contents, project: project)
-        .workflow_contents.first
-    end
-
     let(:n_visible) { 2 }
 
     it_behaves_like "is indexable"

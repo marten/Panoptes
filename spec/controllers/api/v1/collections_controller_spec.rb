@@ -21,9 +21,6 @@ describe Api::V1::CollectionsController, type: :controller do
   describe '#index' do
     let(:filterable_resources) { collections }
     let(:expected_filtered_ids) { [ filterable_resources.first.id.to_s ] }
-    let!(:private_resource) do
-      create :collection_with_subjects, private: true
-    end
     let(:resource) { collection }
     let(:n_visible) { 2 }
     let(:deactivated_resource) { create(:collection, activated_state: :inactive) }
